@@ -11,6 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Logger;
 
+/**
+ \* Created with IntelliJ IDEA.
+ \* User: Alexei Zaitcev
+ \* Description: Пэйдж для работы с браузером для мейла
+ \*/
 
 public class MailBase {
 

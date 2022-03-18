@@ -7,6 +7,12 @@ import java.util.logging.Logger;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ \* Created with IntelliJ IDEA.
+ \* User: Alexei Zaitcev
+ \* Description: Пэйдж ботов
+ \*/
+
 public class TestBot {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestBot.class));
 

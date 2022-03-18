@@ -8,6 +8,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ \* Created with IntelliJ IDEA.
+ \* User: Alexei Zaitcev
+ \* Description: Пэйдж для работы с новой страницей логина
+ \*/
+
 public class NewMailLoginPage {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(NewMailLoginPage.class));

@@ -10,6 +10,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ \* Created with IntelliJ IDEA.
+ \* User: Alexei Zaitcev
+ \* Description: Пэйдж для работы со страницей логина
+ \*/
+
 public class MailLoginPage {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(MailLoginPage.class));

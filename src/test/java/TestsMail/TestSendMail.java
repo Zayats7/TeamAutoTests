@@ -12,6 +12,11 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
+ \* Created with IntelliJ IDEA.
+ \* User: Alexei Zaitcev
+ \*/
+
+/**
  * Тест проверяет логин и отправку письма самому себе
  * 1. Залогиниться пользователем
  * 2. Открыть леер сообщений

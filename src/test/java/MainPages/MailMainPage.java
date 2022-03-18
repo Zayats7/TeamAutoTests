@@ -7,6 +7,12 @@ import static com.codeborne.selenide.Selenide.$;
 
 import java.util.logging.Logger;
 
+/**
+ \* Created with IntelliJ IDEA.
+ \* User: Alexei Zaitcev
+ \* Description: Пэйдж для работы с главной страницей почты
+ \*/
+
 public class MailMainPage {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(MailMainPage.class));
