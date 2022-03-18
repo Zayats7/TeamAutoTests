@@ -1,12 +1,15 @@
 package TestsMail;
 
 import Base.MailBase;
-import LoginPages.LoginLeer;
+import Bot.TestBot;
 import LoginPages.NewMailLoginPage;
 import MainPages.MailMainPage;
 import org.junit.jupiter.api.*;
 
 import java.util.logging.Logger;
+
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$;
 
 /**
  * Тест проверяет логин и отправку письма самому себе
@@ -23,17 +26,21 @@ import java.util.logging.Logger;
 public class TestSendMail extends MailBase {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestSendMail.class));
-    public static final String LOGIN = "margleibblan@mail.ru";
-    private static final String PASSWORD = "qwedcxzasdfghjkl;'\\";
+    private static final TestBot BOT = new TestBot("margleibblan@mail.ru","qwedcxzasdfghjkl;'\\");
 
     @Test
     public void testSentMessage() {
         NewMailLoginPage loginPage = new NewMailLoginPage();
         LOGGER.info("Логин");
-        loginPage.doLogin(LOGIN);
+        loginPage.doLogin();
+        String login = BOT.getLogin();
         loginPage.doCheckBox();
         LOGGER.info("Пароль");
-        loginPage.doPassword(PASSWORD);
+        loginPage.doPassword();
+        String checkmail = $(NewMailLoginPage.CHECK_E_MAIL).shouldBe(visible).getText();
+        LOGGER.info("Сравниваем введенный адрес почты и отображаемый");
+        Assertions.assertEquals(login, checkmail, "Логины не совпадают");
+        BOT.getPassword();
         LOGGER.info("Заходим в почту");
         loginPage.goToMainPage();
 

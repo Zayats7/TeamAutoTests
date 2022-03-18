@@ -2,11 +2,10 @@ package TestsMail;
 
 import Base.MailBase;
 import LoginPages.LoginLeer;
-import LoginPages.NewMailLoginPage;
+import LoginPages.MailLoginPage;
 import MainPages.MailMainPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import java.util.logging.Logger;
 
@@ -42,7 +41,7 @@ public class TestAddSecondAccount extends MailBase {
 
     @Test
     public void testAddSecondAccount() {
-        NewMailLoginPage loginPage = new NewMailLoginPage();
+        MailLoginPage loginPage = new MailLoginPage();
         LOGGER.info("Логин");
         loginPage.doLogin(LOGIN);
         loginPage.doCheckBox();
