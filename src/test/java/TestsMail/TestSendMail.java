@@ -1,6 +1,7 @@
 package TestsMail;
 
 import Base.MailBase;
+import LoginPages.LoginLeer;
 import LoginPages.NewMailLoginPage;
 import MainPages.MailMainPage;
 import org.junit.jupiter.api.*;
@@ -50,6 +51,5 @@ public class TestSendMail extends MailBase {
         Assertions.assertTrue(mainPage.sendMessageLayer().isDisplayed());
         LOGGER.warning("Письмо отправлено, тест пройден");
     }
-
 }
 
