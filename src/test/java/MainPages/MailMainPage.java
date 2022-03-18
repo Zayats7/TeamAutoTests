@@ -19,6 +19,8 @@ public class MailMainPage {
     private static final By TEXT_BOX = By.xpath(".//div[contains(@role, 'textbox')]");
     private static final By SENT_BUTTON = By.xpath(".//span[contains(@data-title-shortcut, 'Cmd+Enter')]");
     private static final By SEND_MESSAGE_LAYER = By.xpath(".//*[contains(@class, 'layer__link')]");
+    private static final By MAIL_BUTTON = By.xpath(".//span[contains(@class, 'ph-dropdown-icon svelte-14x1gy5')]");
+    private static final By ADD_ACCOUNT = By.xpath(".//div[contains(@data-testid, 'whiteline-account-item')]");
 
     public void writeMessageButton() {
         LOGGER.warning("Проверяем видимость кнопки создания нового сообщения и кликаем на нее");
@@ -55,4 +57,13 @@ public class MailMainPage {
         return $(SEND_MESSAGE_LAYER).shouldBe(visible);
     }
 
+    public void accountButton() {
+        LOGGER.warning("Проверяем видимость поля и кликаем на него");
+        $(MAIL_BUTTON).shouldBe(visible).click();
+    }
+
+    public void addAccount() {
+        LOGGER.warning("Проверяем видимость поля добавления аккаунта и кликаем на него");
+        $(ADD_ACCOUNT).shouldBe(visible).click();
+    }
 }
