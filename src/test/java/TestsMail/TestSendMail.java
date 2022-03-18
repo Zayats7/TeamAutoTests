@@ -59,6 +59,5 @@ public class TestSendMail extends MailBase {
         Assertions.assertTrue(mainPage.sendMessageLayer().isDisplayed());
         LOGGER.warning("Письмо отправлено, тест пройден");
     }
-
 }
 
