@@ -2,6 +2,7 @@ package TestsMyVision;
 
 import Base.MyVisionBase;
 import MainPages.MyVisionMainPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.logging.Logger;
@@ -20,6 +21,7 @@ public class TestBackupScrollToTop extends MyVisionBase {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestBackupScrollToTop.class));
 
     @Test
+    @Tag("vision")
     public void testBackupScrollToTop(){
         LOGGER.info("тест проверяет работоспособность кнопки возвращения к началу страницы");
         MyVisionMainPage mainPage = new MyVisionMainPage();
